@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>tlog - tech blog of the day</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        <!-- GET request to https://docs.google.com/spreadsheets/d/1pvwjyRWvRPzHoacraKi4w6324-BErl3Bs-Q9HIwbeGI/gviz/tq?tqx=out:csv&sheet=Sheet1&tq=SELECT B WHERE D = "27/07/2024"-->
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://docs.google.com/spreadsheets/d/1pvwjyRWvRPzHoacraKi4w6324-BErl3Bs-Q9HIwbeGI/gviz/tq?tqx=out:csv&sheet=Sheet1&tq=SELECT%20B%20WHERE%20D%20%3D%20%2227/07/2024%22", true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var blogUrl = xhr.responseText.split("\n")[1];
+                // remove `"` start and end of the URL
+                blogUrl = blogUrl.substring(1, blogUrl.length - 1);
+                window.location.href = blogUrl;
+            }
+        };
+        xhr.send();
+    </script>
+</head>
+<body style="background:#000;color:white;">
+    <h1>tech blog of the day</h1>
+    <p>redirecting you to blog of the day...</p>
+</body>
+</html>
