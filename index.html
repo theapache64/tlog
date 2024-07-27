@@ -19,13 +19,24 @@
                 // remove `"` start and end of the URL
                 blogUrl = blogUrl.substring(1, blogUrl.length - 1);
 
-                // go to blogUrl
-                window.location.href = blogUrl;
+                // go to blogUrl after 2 seconds
+                setTimeout(function() {
+                    window.location.href = blogUrl;
+                }, 2000);
             }
         };
         xhr.send();
     </script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MHEGS9YHV3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MHEGS9YHV3');
+</script>
 <body style="background:#000;color:white;">
     <h1>tech blog of the day</h1>
     <p>redirecting you to blog of the day...</p>

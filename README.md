@@ -14,4 +14,3 @@ If you want to add your blog to the list, please submit this form ➡️ https:/
 ## Future Scope
 - [ ] Shorten the domain
 - [ ] Vote on the tlog
-- [ ] Open random tlog
