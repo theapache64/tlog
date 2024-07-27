@@ -11,3 +11,7 @@ Just visit https://theapache64.github.io/tlog
 ## Add blog
 If you want to add your blog to the list, please submit this form ➡️ https://forms.gle/V1Vj8dsw5xps1nJe7
 
+## Future Scope
+- [ ] Shorten the domain
+- [ ] Vote on the tlog
+- [ ] Open random tlog
