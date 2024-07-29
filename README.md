@@ -3,7 +3,7 @@
 > tech blog of the day
 
 **tlog**, derived from "tech blog", is a simple website that redirects you to a different tech blog every day. 
-It is a project that I created to encourage myself to read a tech blog daily 🫠
+This is a project that I created to encourage myself to read a tech blog daily  🫠
 
 ## 💡 Usage
 Just visit https://theapache64.github.io/tlog 
