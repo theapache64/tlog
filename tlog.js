@@ -1,3 +1,9 @@
+// read URL path and get the data after the last `/`
+const path = window.location.pathname;
+const data = path.split("#/").pop();
+console.log("Data: '" + data+"'");
+
+
 // get current date in format dd/mm/yyyy
 let today = new Date();
 const dd = String(today.getDate()).padStart(2, '0');
@@ -21,10 +27,11 @@ xhr.onreadystatechange = function() {
         // remove `"` start and end of the URL
         blogUrl = blogUrl.substring(1, blogUrl.length - 1);
 
+        console.log("URL is " + blogUrl);
 
         // go to blogUrl after 2 seconds
         setTimeout(function() {
-            window.location.href = blogUrl;
+            // window.location.href = blogUrl;
         }, 2000);
     }
 };
