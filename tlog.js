@@ -37,7 +37,7 @@ xhr.onreadystatechange = function() {
 
         // go to blogUrl after 2 seconds
         setTimeout(function() {
-            // window.location.href = blogUrl;
+            window.location.href = blogUrl;
         }, 2000);
     }
 };
