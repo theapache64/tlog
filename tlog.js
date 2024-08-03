@@ -1,17 +1,23 @@
-// read URL path and get the data after the last `/`
-const path = window.location.pathname;
-const data = path.split("#/").pop();
+// read URL path and get the data after the last `#` character
+const currentUrl = window.location.href;
+console.log("Current URL: " + currentUrl);
+const data = currentUrl.substring(currentUrl.lastIndexOf("#") + 1).trim();
 console.log("Data: '" + data+"'");
 
-
-// get current date in format dd/mm/yyyy
-let today = new Date();
-const dd = String(today.getDate()).padStart(2, '0');
-const mm = String(today.getMonth() + 1).padStart(2, '0');
-const yyyy = today.getFullYear();
-today = dd + '/' + mm + '/' + yyyy;
-console.log("Today: " + today);
-const url = "https://docs.google.com/spreadsheets/d/1pvwjyRWvRPzHoacraKi4w6324-BErl3Bs-Q9HIwbeGI/gviz/tq?tqx=out:csv&sheet=Sheet1&tq=SELECT B WHERE D = '" + today + "'";
+// Check if data string is a number or not
+let url;
+if (isNaN(data)) {
+    // get current date in format dd/mm/yyyy
+    let today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = today.getFullYear();
+    today = dd + '/' + mm + '/' + yyyy;
+    console.log("Today: " + today);
+    url = "https://docs.google.com/spreadsheets/d/1pvwjyRWvRPzHoacraKi4w6324-BErl3Bs-Q9HIwbeGI/gviz/tq?tqx=out:csv&sheet=Sheet1&tq=SELECT B WHERE D = '" + today + "'";
+}else{
+    url = "https://docs.google.com/spreadsheets/d/1pvwjyRWvRPzHoacraKi4w6324-BErl3Bs-Q9HIwbeGI/gviz/tq?tqx=out:csv&sheet=Sheet1&tq=SELECT B WHERE E = '%23" + data + "'";
+}
 console.log("URL: " + url);
 
 // Get blog URL from Google Sheet
