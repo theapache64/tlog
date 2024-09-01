@@ -8,9 +8,6 @@ This is a project that I created to encourage myself to read a tech blog daily  
 ## 💡 Usage
 Just visit https://theapache64.github.io/tlog 
 
-## ➕ Got a blog to share?
-If you want to add your blog to the list, please submit this form ➡️ https://forms.gle/V1Vj8dsw5xps1nJe7
-
 ## 📆 Schedule
 You can see the full schedule here ➡️ https://docs.google.com/spreadsheets/d/1pvwjyRWvRPzHoacraKi4w6324-BErl3Bs-Q9HIwbeGI/edit?usp=sharing
 
