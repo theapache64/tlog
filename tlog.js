@@ -16,7 +16,7 @@ if (isNaN(data)) {
     console.log("Today: " + today);
     url = "https://docs.google.com/spreadsheets/d/1pvwjyRWvRPzHoacraKi4w6324-BErl3Bs-Q9HIwbeGI/gviz/tq?tqx=out:csv&sheet=Sheet1&tq=SELECT B WHERE D = '" + today + "'";
 }else{
-    url = "https://docs.google.com/spreadsheets/d/1pvwjyRWvRPzHoacraKi4w6324-BErl3Bs-Q9HIwbeGI/gviz/tq?tqx=out:csv&sheet=Sheet1&tq=SELECT B WHERE E = '%23" + data + "'";
+    url = "https://docs.google.com/spreadsheets/d/1pvwjyRWvRPzHoacraKi4w6324-BErl3Bs-Q9HIwbeGI/gviz/tq?tqx=out:csv&sheet=Sheet1&tq=SELECT B WHERE E = " + data;
 }
 console.log("URL: " + url);
 
