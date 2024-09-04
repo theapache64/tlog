@@ -1,3 +1,5 @@
+const startTime = new Date().getTime();
+
 // read URL path and get the data after the last `#` character
 const currentUrl = window.location.href;
 console.log("Current URL: " + currentUrl);
@@ -36,9 +38,17 @@ xhr.onreadystatechange = function() {
         console.log("URL is " + blogUrl);
 
         // go to blogUrl after 2 seconds
-        setTimeout(function() {
+        const timeSpent = new Date().getTime() - startTime;
+        if(timeSpent < 2000){
+            const waitTime = 2000 - timeSpent
+            console.log("waiting for " + waitTime + " milliseconds")
+            setTimeout(function(){
+                window.location.href = blogUrl;
+            }, waitTime);
+        }else{
+            console.log("Hot hit!")
             window.location.href = blogUrl;
-        }, 2000);
+        }
     }
 };
 xhr.send();
